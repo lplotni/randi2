@@ -68,6 +68,7 @@ public abstract class ComponentFinder {
     public static HtmlElement findElementById(HtmlPage page, String id) {
         for (HtmlElement e : page.getAllHtmlChildElements()) {
             String currentId = e.getId();
+            System.out.println("Current ID: "+currentId);
             if (currentId.endsWith(id)) {
                 return e;
             }
